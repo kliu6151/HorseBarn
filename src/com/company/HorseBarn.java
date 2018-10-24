@@ -18,19 +18,15 @@ public class HorseBarn {
         return -1;
     }
 
-    public void consolidate () {
-        for(int i = 0;i<spaces.length;i++)
-        {
-            if(spaces[i] == null)
-            {
-                for(int x=i; x<spaces.length-i;x++)
-                {
-                    if(spaces[x] != null)
-                    {
-                        spaces[i] = spaces[x];
-                    }
-                }
+    public void consolidate() {
+        Horse[] newSpaces = new Horse[this.spaces.length];
+        int nextSpot = 0;
+        for (Horse nextHorse : this.spaces) {
+            if (nextHorse != null) {
+                newSpaces[nextSpot] = nextHorse;
+                nextSpot++;
             }
         }
+        this.spaces = newSpaces;
     }
 }
