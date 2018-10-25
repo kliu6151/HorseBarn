@@ -12,7 +12,7 @@ public class HorseBarn {
 
     public int findHorseSpace (String name) {
         for (int i = 0; i < spaces.length; i++) {
-            if (spaces[i] != null && name.equals(spaces[i]))
+            if (spaces[i] != null && name.equals(spaces[i].getName()))
                 return i;
         }
         return -1;
@@ -29,4 +29,13 @@ public class HorseBarn {
         }
         this.spaces = newSpaces;
     }
+
+    public String toString(){
+        String result = "";
+        for(int i = 0;i<spaces.length;i++){
+            if (spaces[i] != null)
+                result = result + spaces[i].getName() + " is in space " + i + " and is a " + spaces[i].getHorse() + '\n';
+            }
+        return result;
+        }
 }

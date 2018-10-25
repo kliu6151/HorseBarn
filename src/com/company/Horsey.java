@@ -18,5 +18,5 @@ public class Horsey implements Horse {
     public int getWeight () {
         return this.weight;
     }
+    public String getHorse () {return "Horsey";}
 }
-

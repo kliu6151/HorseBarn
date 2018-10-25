@@ -1,11 +1,14 @@
 package com.company;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class HorseRunner {
 
     public static void main(String[] args) {
                 Horse horse1 = new Horsey("Secretariat", 12000);
                 Horse horse2 = new Horsey("Dusty Trail", 22000);
-                Horse horse3 = new Horsey("Silver", 12000);
+                Horse horse3 = new Unicorno("Silver", 12000);
 
                 Horse[] horses = new Horse[6];
 
